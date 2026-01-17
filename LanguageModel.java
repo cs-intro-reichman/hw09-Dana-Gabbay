@@ -88,7 +88,7 @@ public class LanguageModel {
 		double r = randomGenerator.nextDouble();
         for (int i=0; i<probs.getSize(); i++){
             CharData cd = probs.get(i);
-            if (r<cd.cp){
+            if (r<=cd.cp){
                 return cd.chr;
             }
         }
