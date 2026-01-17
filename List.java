@@ -39,7 +39,10 @@ public class List {
     
     /** GIVE Textual representation of this list. */
     public String toString() {
-        String result= "";
+        if (size==0){
+            return "()";
+        }
+        String result= "(";
         Node pointer = first;
         while (pointer!=null)
         {
@@ -49,7 +52,7 @@ public class List {
             }
             pointer=pointer.next;
         }
-            
+         result=result+ ")";   
         return result;
     }
 
