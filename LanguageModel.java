@@ -39,7 +39,7 @@ public class LanguageModel {
         while (window.length() < windowLength && !in.isEmpty()) {
             c = in.readChar();
             if (c == '\r') {
-                continue;
+                c='\n';
             }
             window = window + c;
         }
@@ -49,7 +49,7 @@ public class LanguageModel {
         while (!in.isEmpty()){
             c=in.readChar();
             if (c == '\r') {
-             continue;
+             c='\n';
               }
             List probs = CharDataMap.get(window);
             if (probs==null){
